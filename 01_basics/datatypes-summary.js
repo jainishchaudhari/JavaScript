@@ -38,6 +38,29 @@ myFunction();
 
 const arr1 = ["hi", 6, "hey"];
 
-console.log(arr1[1]);
+// console.log(arr1[1]);
 
-console.log(typeof arr1[1]);
+// console.log(typeof arr1[1]);
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//stack (primitiv) or Heap (non primitiv)
+
+let myYoutube = "hitdotcom";
+
+let anotherName = myYoutube;
+anotherName = "jaidotcom"
+
+console.log(anotherName);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ypl"
+};
+
+let userTwo = userOne;
+
+userTwo.email = "jai@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
