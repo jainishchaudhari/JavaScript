@@ -82,8 +82,8 @@ console.log(me);   // easy way to call key value {Destructuring with Alias}
 //     "price": "free"
 // }
 
-[
-    {},
-    {},
-    {}
-];
+// [
+//     {},
+//     {},
+//     {}
+// ];
