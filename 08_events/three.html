@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Build Something Amazing</h1>
+    <button id="start">start</button> 
+    <button id="stop">stop</button> 
+  </body>
+  <script>
+    const sayTime = (str) => {
+        const date = new Date();
+        const date1 = date.toLocaleTimeString()
+        console.log(str, date1);    
+    }
+    let intervalId;
+
+    const starti = document.querySelector("#start")
+    starti.addEventListener("click", () => {
+        console.log("starting...");
+        
+        intervalId = setInterval(sayTime ,1000, "hi")
+    })
+    
+
+    const stopi = document.querySelector("#stop")
+    stopi.addEventListener("click", () => {
+        clearInterval(intervalId)
+        console.log("stopped");
+        
+    })
+  </script>
+</html>
