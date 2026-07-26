@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Jainish</h1>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const sayHello = () => {
+        console.log('hello');
+        
+    }
+
+    const changeText = () => {document.querySelector("h1").innerHTML = "JS"}
+    const hehe = setTimeout(changeText,3000)
+
+    const stopi = document.querySelector("#stop")
+    stopi.addEventListener("click", () => {
+        clearTimeout(hehe);
+        
+    })
+     
+
+
+  </script>
+</html>
