@@ -11,6 +11,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        flex-direction: column;
       }
       .parent {
         /* background-color: aqua; */
@@ -30,8 +31,8 @@
     <div class="parent">
       <div class="child1" ></div>
       <div class="child2"></div>
-      <button>click me!</button>
     </div>
+    <button>click me!</button>
   </body>
 
   <script>
@@ -39,10 +40,10 @@
     const child1 = document.querySelector(".child1")
     const child2 = document.querySelector(".child2")
     const button = document.querySelector("button")
+    let isVisible = false;
 
-
+    const requestUrl = "https://api.github.com/users/jainishchaudhari";
     const event1 = () => {
-            const requestUrl = "https://api.github.com/users/jainishchaudhari";
 
     const xhr = new XMLHttpRequest();
 
@@ -69,8 +70,20 @@
     };
     xhr.send();
     }
+    
+    button.addEventListener('click', () => {
+        if (isVisible === false){
 
-    button.addEventListener('click', event1)
+        event1()
+        isVisible = true;
+    }else{
 
+        child1.innerHTML = "";
+        child2.innerHTML = "";
+        isVisible = false;
+    }
+    })
+
+    
   </script>
 </html>
